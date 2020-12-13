@@ -59,9 +59,9 @@ MIDDLEWARE = [
 # https://github.com/ottoyiu/django-cors-headers
 CORS_ORIGIN_ALLOW_ALL = DEBUG
 CORS_ORIGIN_WHITELIST = config('CORS_ORIGIN_WHITELIST',
-                               default='*',
+                               default='http://rkarami.me',
                                cast=Csv())
-CORS_ORIGIN_REGEX_WHITELIST = config('CORS_ORIGIN_REGEX_WHITELIST', default=r'.*$', cast=Csv())
+CORS_ORIGIN_REGEX_WHITELIST = config('CORS_ORIGIN_REGEX_WHITELIST', default=r'.*.rkarami.me$', cast=Csv())
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOW_HEADERS = default_headers + (
